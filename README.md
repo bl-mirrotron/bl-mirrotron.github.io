@@ -24,9 +24,9 @@ The RF source is a modular system based on the Red-Pitaya Stemlab 125-14 reconfi
 
 ##### Figure 1 #####
 *Block diagram of LLRF*
-![llrf block diagam](images/LlrfFPDiagram.png)
+![llrf block diagam](doc/LlrfFPDiagram.png)
 
 ##### Figure 2 #####
 *LLRF modules Implementation*
-![llr](images/llrf.jpg)
+![llr](doc/llrf.jpg)
 
