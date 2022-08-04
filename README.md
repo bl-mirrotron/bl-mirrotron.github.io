@@ -12,7 +12,7 @@ The 2.5 MeV RFQ designed and built by Time Co, Ltd., Japan is a pulsed accelerat
 
 The RFQ accelerator system can be divided into 5 major subsystems
 * [RF source (LLRF)](#rf-source)
-* Timing system
+* [Timing system](#timing-system)
 * 200 MHz RF power amplifier
 * Vacuum system
 * Cooling system
@@ -31,6 +31,20 @@ The RF source is a modular system based on the Red-Pitaya Stemlab 125-14 reconfi
 ##### Figure 2 #####
 *LLRF modules Implementation*
 ![llr](doc/llrf.jpg)
+
+## Timing system
+The Mirrotron RFQ is a pulsed system so a timing system is required. The Mirrotron Timing system is an 8 channel system based on a 32 bit counter clocked at 125 MHz. The resolution of the timing system is 8nS and can have intervals as long as 17 seconds.
+
+#### Channel allocation
+The Mirrotron RFQ uses five of the eight channels:
+* <ins>Channel 0</ins>  for the RF source and phase Detector
+* <ins>Channel 1</ins>  for LLRF scope
+* <ins>Channel 2</ins>  for the RF Power Amp pulse gate
+* <ins>Channel 3</ins>  for the RF Power Amp sample and hold
+* <ins>Channel 4</ins>  for the RF Power Amp Scope
+
+#### Easy Setup Timer
+These channels can be configured with the Timing App as shown in Figure 30. To change the pulse length of the RFQ, all five channels would need to be adjusted which would be time consuming and error prone. To make it easier to change the pulse length a virtual tray called the Easy Setup Timer was created. This virtual tray will adjust all five channels synchronously.
 
 ## Machine protection system
 More to come
