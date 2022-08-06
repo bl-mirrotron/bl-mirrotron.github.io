@@ -15,7 +15,7 @@ The RFQ accelerator system can be divided into 5 major subsystems
 * [Timing system](#timing-system)
 * 200 MHz RF power amplifier
 * Vacuum system
-* Cooling system
+* [Cooling system](#cooling-system)
 * [Machine protection system](#machine-protection-system)
 
 ## RF source
@@ -45,6 +45,9 @@ The Mirrotron RFQ uses five of the eight channels:
 
 #### Easy Setup Timer
 These channels can be configured with the Timing App as shown in Figure 30. To change the pulse length of the RFQ, all five channels would need to be adjusted which would be time consuming and error prone. To make it easier to change the pulse length a virtual tray called the Easy Setup Timer was created. This virtual tray will adjust all five channels synchronously.
+
+## Cooling system
+More to come
 
 ## Machine protection system
 More to come
