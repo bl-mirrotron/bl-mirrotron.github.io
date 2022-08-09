@@ -20,18 +20,16 @@ The RFQ accelerator system can be divided into 5 major subsystems
 * [Machine protection system](#machine-protection-system)
 
 ## RF source
-The RF source is a modular system based on the Red-Pitaya Stemlab 125-14 reconfigurable instrument platform. A modular approach was chosen for design simplicity and future upgrades. Likewise, the Red-Pitaya Stemlab 125-14 was chosen for its ease of use. A block diagram is shown in [Figure 1](#figure-1). The LLRF system comprises of three modules:
-- [RF Frequency Source](https://bl-mirrotron.github.io/mirrotron-rf-src-tray/)
-- [Four Quadrant IQ Phase Detector](https://bl-mirrotron.github.io/mirrotron-phase-detector-tray/)
+The RF source is a modular system based on the Red-Pitaya Stemlab 125-14 reconfigurable instrument platform. A modular approach was chosen for design simplicity and future upgrades. Likewise, the Red-Pitaya Stemlab 125-14 was chosen for its ease of use. A block diagram is shown in Figure 1. The LLRF system comprises of three modules:
+- <a href="https://bl-mirrotron.github.io/mirrotron-rf-src-tray/" target="_blank">RF Frequency Source</a>
+- <a href="https://bl-mirrotron.github.io/mirrotron-phase-detector-tray/" target="_blank">Four Quadrant IQ Phase Detector</a>
 - [IQ Monitor System](#iq-monitor-system)
 
-##### Figure 1 #####
-*Block diagram of LLRF*
-![llrf block diagam](doc/LlrfFPDiagram.png)
+<p></p><p style="text-align:center;font-size: large;"><span style="font-weight: bold;color: green;">Figure 1. </span> <span style="font-style: italic;">Block diagram of LLRF</span></p>
+<div style="width:100%;text-align:center;"><img width="100%" style="border-style:solid;border-color:#1c6e97;" src="doc/LlrfFPDiagram.png"/></div><br>
 
-##### Figure 2 #####
-*LLRF modules Implementation*
-![llr](doc/llrf.jpg)
+<p></p><p style="text-align:center;font-size: large;"><span style="font-weight: bold;color: green;">Figure 2. </span> <span style="font-style: italic;">LLRF modules Implementation</span></p>
+<div style="width:100%;text-align:center;"><img width="100%" style="border-style:solid;border-color:#1c6e97;" src="doc/llrf.jpg"/></div><br>
 
 ## Timing system
 The Mirrotron RFQ is a pulsed system so a timing system is required. The Mirrotron Timing system is an 8 channel system based on a 32 bit counter clocked at 125 MHz. The resolution of the timing system is 8nS and can have intervals as long as 17 seconds.
@@ -48,7 +46,21 @@ The Mirrotron RFQ uses five of the eight channels:
 These channels can be configured with the Timing App as shown in Figure 30. To change the pulse length of the RFQ, all five channels would need to be adjusted which would be time consuming and error prone. To make it easier to change the pulse length a virtual tray called the Easy Setup Timer was created. This virtual tray will adjust all five channels synchronously.
 
 ## Cooling system
-More to come
+The RFQ will dissipate energy at an average rate of 15kW when running at peak RF power and  5% duty factor. To keep the remove this energy, two water chillers supply cooling water to the upstream (inlet) and downstream (outlet) ends of the RFQ.  The cooling water flows into headers that split the cooling to various cooling channels built into the RFQ. Control of the water chillers is manual and not part of the control system.
+
+However to ensure that water is flowing at the correct flow rate and temperature, a separate temperature monitor and flow monitor is mounted on each cooling channel on each header as shown in FigureXXX. On top of each header, as shown in FigureXXX,  are mounted custom built Blinky-Lite<sup>TM</sup> trays that measure and report the temperature and flow through each cooling channel to the control system.
+
+Details about the cooling monitor system software and electronics can be found at:
+* <a href="https://bl-mirrotron.github.io/mirrotron-rfq-temp-tray-inlet/" target="_blank">Inlet temperature tray</a>
+* <a href="https://bl-mirrotron.github.io/mirrotron-rfq-flow-tray-inlet/" target="_blank">Inlet flow tray</a>
+* <a href="https://bl-mirrotron.github.io/mirrotron-rfq-temp-tray-outlet/" target="_blank">Outlet temperature tray</a>
+* <a href="https://bl-mirrotron.github.io/mirrotron-rfq-flow-tray-outlet/" target="_blank">Outlet flow tray</a>
+
+<p></p><p style="text-align:center;font-size: large;"><span style="font-weight: bold;color: green;">FigureXXX. </span> <span style="font-style: italic;">Cooling System Header</span></p>
+<div style="width:100%;text-align:center;"><img width="100%" style="border-style:solid;border-color:#1c6e97;" src="doc/coolingHeaderBottomView.jpg"/></div><br>
+
+<p></p><p style="text-align:center;font-size: large;"><span style="font-weight: bold;color: green;">FigureXXX. </span> <span style="font-style: italic;">Outlet Cooling System Header<br>From left to right: Temperature cube and tray, 5V power, 24V power, Flow cube and tray</span></p>
+<div style="width:100%;text-align:center;"><img width="100%" style="border-style:solid;border-color:#1c6e97;" src="doc/coolingHeaderTopView.jpg"/></div><br>
 
 ## Machine protection system
 More to come
