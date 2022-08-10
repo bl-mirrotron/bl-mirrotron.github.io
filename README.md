@@ -8,6 +8,8 @@
 * <a href="https://bl-mirrotron.github.io/mirrotron-phase-detector-tray/" target="_blank">Four Quadrant IQ Phase Detector</a>
 * <a href="https://bl-mirrotron.github.io/gateGen125-tray/" target="_blank">Timing Gate Generator</a>
 * <a href="https://bl-mirrotron.github.io/mirrotron-rfq-llrf-timer-cube/" target="_blank">RFQ LLRF Timer Cube</a>
+* <a href="https://bl-mirrotron.github.io/mirrotron-llrf-scope-tray/" target="_blank">IQ Monitor System</a>
+* <a href="https://bl-mirrotron.github.io/mirrotron-rfpower-scope-tray/" target="_blank">RF Power Monitor System</a>
 * <a href="https://bl-mirrotron.github.io/mirrotron-rfq-temp-cube/" target="_blank">RFQ Temperature Cube</a>
 * <a href="https://bl-mirrotron.github.io/mirrotron-rfq-temp-tray-inlet/" target="_blank">RFQ Inlet Temperature Tray</a>
 * <a href="https://bl-mirrotron.github.io/mirrotron-rfq-temp-tray-inlet/" target="_blank">RFQ Inlet Temperature Tray</a>
@@ -24,7 +26,7 @@ The Mirrotron Radio Frequency Quadrupole (RFQ) is part of a compact neutron sour
 
 The 2.5 MeV RFQ designed and built by Time Co, Ltd., Japan is a pulsed accelerator that can support 1.25 mS pulses at a rate of 40 Hz for a maximum duty factor of 5% . The RFQ can accelerate a peak beam current of 20 mA with an input RF power 260 kW at 200 MHz. providing an average beam power of 2.5 kW. The loaded cavity Q is 10,000 which results in a cavity bandwidth of 20 kHz.
 
-The RFQ accelerator system can be divided into 5 major subsystems
+The RFQ accelerator system can be divided into 6 major subsystems
 * [RF source (LLRF)](#rf-source)
 * [Timing system](#timing-system)
 * 200 MHz RF power amplifier
@@ -33,10 +35,11 @@ The RFQ accelerator system can be divided into 5 major subsystems
 * [Machine protection system](#machine-protection-system)
 
 ## RF source
-The RF source is a modular system based on the Red-Pitaya Stemlab 125-14 reconfigurable instrument platform. A modular approach was chosen for design simplicity and future upgrades. Likewise, the Red-Pitaya Stemlab 125-14 was chosen for its ease of use. A block diagram is shown in Figure 1. The LLRF system comprises of three modules:
+The RF source is a modular system based on the Red-Pitaya Stemlab 125-14 reconfigurable instrument platform. A modular approach was chosen for design simplicity and future upgrades. Likewise, the Red-Pitaya Stemlab 125-14 was chosen for its ease of use. A block diagram is shown in Figure 1. The LLRF system comprises of four modules:
 - <a href="https://bl-mirrotron.github.io/mirrotron-rf-src-tray/" target="_blank">RF Frequency Source</a>
 - <a href="https://bl-mirrotron.github.io/mirrotron-phase-detector-tray/" target="_blank">Four Quadrant IQ Phase Detector</a>
-- [IQ Monitor System](#iq-monitor-system)
+- <a href="https://bl-mirrotron.github.io/mirrotron-llrf-scope-tray/" target="_blank">IQ Monitor System</a>
+- <a href="https://bl-mirrotron.github.io/mirrotron-rfpower-scope-tray/" target="_blank">RF Power Monitor System</a>
 
 <p></p><p style="text-align:center;font-size: large;"><span style="font-weight: bold;color: green;">Figure 1. </span> <span style="font-style: italic;">Block diagram of LLRF</span></p>
 <div style="width:100%;text-align:center;"><img width="100%" style="border-style:solid;border-color:#1c6e97;" src="doc/LlrfFPDiagram.png"/></div><br>
@@ -60,6 +63,9 @@ These channels can be configured with the Timing App as shown in Figure 30. To c
 
 <p></p><p style="text-align:center;font-size: large;"><span style="font-weight: bold;color: green;">FigureXXX. </span> <span style="font-style: italic;">Gate Generator Implementation</span></p>
 <div style="width:100%;text-align:center;"><img width="100%" style="border-style:solid;border-color:#1c6e97;" src="doc/GateGenImpl.jpg"/></div><br>
+
+## 200 MHz RF power amplifier
+more to come
 
 ## Cooling system
 The RFQ will dissipate energy at an average rate of 15kW when running at peak RF power and  5% duty factor. To keep the remove this energy, two water chillers supply cooling water to the upstream (inlet) and downstream (outlet) ends of the RFQ.  The cooling water flows into headers that split the cooling to various cooling channels built into the RFQ. Control of the water chillers is manual and not part of the control system.
