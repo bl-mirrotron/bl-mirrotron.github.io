@@ -3,7 +3,7 @@
 * <a href="https://github.com/bl-mirrotron" target="_blank">Source code</a>
 
 ## Repositories
-* <a href="https://bl-mirrotron.github.io/mirrotron-box/" target="_blank">Mirrotron Application Server</a>
+* <a href="https://bl-mirrotron.github.io/mirrotron-box/">Mirrotron Application Server</a>
 * <a href="https://bl-mirrotron.github.io/mirrotron-rf-src-tray/" target="_blank">RF Frequency Source</a>
 * <a href="https://bl-mirrotron.github.io/mirrotron-phase-detector-tray/" target="_blank">Four Quadrant IQ Phase Detector</a>
 * <a href="https://bl-mirrotron.github.io/gateGen125-tray/" target="_blank">Timing Gate Generator</a>
