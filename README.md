@@ -1,10 +1,10 @@
-# Mirrotron RFQ Control System
+# Mirrotron Control System
 ![llr](doc/mirrotronSplash.png)
 * <a href="https://github.com/bl-mirrotron" target="_blank">Source code</a>
 
 ## Repositories
+* <a href="https://docs.bl-mirrotron.com/mirrotron-user-guide/">Mirrotron Users guide</a>
 * <a href="https://docs.bl-mirrotron.com/mirrotron-box/">Mirrotron Application Server</a>
-* <a href="https://docs.bl-mirrotron.com/mirrotron-user-guide/">Mirrotron Application Users guide</a>
 * <a href="https://docs.bl-mirrotron.com/mirrotron-rf-src-tray/">RF Frequency Source</a>
 * <a href="https://docs.bl-mirrotron.com/mirrotron-phase-detector-tray/">Four Quadrant IQ Phase Detector</a>
 * <a href="https://docs.bl-mirrotron.com/gateGen125-tray/">Timing Gate Generator</a>
