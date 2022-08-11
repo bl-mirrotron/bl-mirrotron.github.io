@@ -1,5 +1,5 @@
+# Mirrotron RFQ Control System
 ![llr](doc/mirrotronSplash.png)
-# The Mirrotron RFQ Control System
 * <a href="https://github.com/bl-mirrotron" target="_blank">Source code</a>
 
 ## Repositories
