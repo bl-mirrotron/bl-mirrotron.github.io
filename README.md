@@ -12,9 +12,9 @@
 * <a href="https://docs.bl-mirrotron.com/mirrotron-rfpower-scope-tray/">RF Power Monitor System</a>
 * <a href="https://docs.bl-mirrotron.com/mirrotron-rfq-temp-cube/">RFQ Temperature Cube</a>
 * <a href="https://docs.bl-mirrotron.com/mirrotron-rfq-temp-tray-inlet/">RFQ Inlet Temperature Tray</a>
-* <a href="https://docs.bl-mirrotron.com/mirrotron-rfq-temp-tray-inlet/">RFQ Inlet Temperature Tray</a>
+* <a href="https://docs.bl-mirrotron.com/mirrotron-rfq-temp-tray-outlet/">RFQ Outlet Temperature Tray</a>
 * <a href="https://docs.bl-mirrotron.com/mirrotron-rfq-flow-cube/">RFQ Flow Cube</a>
-* <a href="https://docs.bl-mirrotron.com/mirrotron-rfq-flow-tray-outlet/">RFQ Outlet Flow Tray</a>
+* <a href="https://docs.bl-mirrotron.com/mirrotron-rfq-flow-tray-inlet/">RFQ Inlet Flow Tray</a>
 * <a href="https://docs.bl-mirrotron.com/mirrotron-rfq-flow-tray-outlet/">RFQ Outlet Flow Tray</a>
 
 ## Overview
