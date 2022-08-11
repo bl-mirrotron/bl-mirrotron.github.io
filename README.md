@@ -1,6 +1,8 @@
 # Mirrotron Control System
 ![llr](doc/mirrotronSplash.png)
 * <a href="https://github.com/bl-mirrotron" target="_blank">Source code</a>
+* <a href="https://www.bl-mirrotron.com/" target="_blank">Mirrotron</a>
+* <a href="https://www.bl-mirrotron.com/apps" target="_blank">Applications</a>
 
 ## Repositories
 * <a href="https://docs.bl-mirrotron.com/mirrotron-user-guide/">Mirrotron Users guide</a>
