@@ -13,6 +13,9 @@
 * <a href="https://docs.bl-mirrotron.com/mirrotron-rfq-llrf-timer-cube/">RFQ LLRF Timer Cube</a>
 * <a href="https://docs.bl-mirrotron.com/mirrotron-llrf-scope-tray/">IQ Monitor System</a>
 * <a href="https://docs.bl-mirrotron.com/mirrotron-rfpower-scope-tray/">RF Power Monitor System</a>
+* <a href="https://docs.bl-mirrotron.com/mirrotron-rfq-vacuum-tray/">RFQ Vacuum System</a>
+* <a href="https://docs.bl-mirrotron.com/mirrotron-rfq-vacuum-cube/">RFQ Vacuum System Cube Controller</a>
+* <a href="https://docs.bl-mirrotron.com/nXDS-backing-pump-tray/">Backing Pump System</a>
 * <a href="https://docs.bl-mirrotron.com/mirrotron-rfq-temp-cube/">RFQ Temperature Cube</a>
 * <a href="https://docs.bl-mirrotron.com/mirrotron-rfq-temp-tray-inlet/">RFQ Inlet Temperature Tray</a>
 * <a href="https://docs.bl-mirrotron.com/mirrotron-rfq-temp-tray-outlet/">RFQ Outlet Temperature Tray</a>
@@ -33,7 +36,7 @@ The RFQ accelerator system can be divided into 6 major subsystems
 * [RF source (LLRF)](#rf-source)
 * [Timing system](#timing-system)
 * 200 MHz RF power amplifier
-* Vacuum system
+* [Vacuum system](#vacuum-system)
 * [Cooling system](#cooling-system)
 * [Machine protection system](#machine-protection-system)
 
@@ -69,6 +72,28 @@ These channels can be configured with the Timing App as shown in Figure 30. To c
 
 ## 200 MHz RF power amplifier
 more to come
+
+## Vacuum system
+
+The RFQ requires ultra-high vacuum for operations. RF power should not be applied to the cavity unless the vacuum pressure inside the cavity is less than 5x10<sup>-5</sup> Pa. The RFQ has two identical vacuum systems mounted on either side of the RFQ as shown in FigureXXX. The <a href="https://docs.bl-mirrotron.com/mirrotron-rfq-vacuum-tray/">RFQ vacuum system tray</a> is responsible for:
+* Control opening and closing of valves
+* Read status of gate valve limit switches
+* Read vacuum gauge pressures
+* Read status of the turbo pumps
+  - Turbo pump error status
+  - Turbo pump 70% speed status
+* RFQ Vacuum protection
+
+The  <a href="https://docs.bl-mirrotron.com/nXDS-backing-pump-tray/">backing pump trays</a> are responsible for:
+* Controlling backing-pump power on and off.
+* Reading backing-pump status
+  - Pump speed
+  - Pump Temperature
+  - Pump hours
+  - Pump cycles
+
+<p></p><p style="text-align:center;font-size: large;"><span style="font-weight: bold;color: green;">FigureXXX. </span> <span style="font-style: italic;">Vacuum system layout</span></p>
+<div style="width:100%;text-align:center;"><img width="100%" style="border-style:solid;border-color:#1c6e97;" src="doc/VacuumLayout.png"/></div><br>
 
 ## Cooling system
 The RFQ will dissipate energy at an average rate of 15kW when running at peak RF power and  5% duty factor. To keep the remove this energy, two water chillers supply cooling water to the upstream (inlet) and downstream (outlet) ends of the RFQ.  The cooling water flows into headers that split the cooling to various cooling channels built into the RFQ. Control of the water chillers is manual and not part of the control system.
