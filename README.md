@@ -5,7 +5,7 @@
 * <a href="https://www.bl-mirrotron.com/apps" target="_blank">Application Launcher</a>
 
 ## Table of Contents
-* [Repositories](#repositories)
+* [Software Repositories](#software-repositories)
 * [Overview](#overview)
 * [Mirrotron application server](#mirrotron-application-server)
 * [RF source (LLRF)](#rf-source)
@@ -14,7 +14,7 @@
 * [Vacuum system](#vacuum-system)
 * [Cooling system](#cooling-system)
 
-## Repositories
+## Software Repositories
 [(contents)](#table-of-contents)<br>
 * <a href="https://docs.bl-mirrotron.com/mirrotron-box/">Mirrotron Application Server</a>
 * <a href="https://docs.bl-mirrotron.com/mirrotron-user-guide/">Mirrotron Users guide</a>
