@@ -42,7 +42,7 @@ The RFQ accelerator system can be divided into 6 major subsystems
 * [Machine protection system](#machine-protection-system)
 
 ## RF source
-The RF source is a modular system based on the Red-Pitaya Stemlab 125-14 reconfigurable instrument platform. A modular approach was chosen for design simplicity and future upgrades. Likewise, the Red-Pitaya Stemlab 125-14 was chosen for its ease of use. A block diagram is shown in Figure 1. The LLRF system comprises of four modules:
+The RF source is a modular system based on the Red-Pitaya Stemlab 125-14 re-configurable instrument platform. A modular approach was chosen for design simplicity and future upgrades. Likewise, the Red-Pitaya Stemlab 125-14 was chosen for its ease of use. A block diagram is shown in Figure 1. The LLRF system comprises of four modules:
 - <a href="https://docs.bl-mirrotron.com/mirrotron-rf-src-tray/">RF Frequency Source</a>
 - <a href="https://docs.bl-mirrotron.com/mirrotron-phase-detector-tray/">Four Quadrant IQ Phase Detector</a>
 - <a href="https://docs.bl-mirrotron.com/mirrotron-llrf-scope-tray/">IQ Monitor System</a>
