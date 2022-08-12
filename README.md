@@ -36,7 +36,7 @@ The 2.5 MeV RFQ designed and built by Time Co, Ltd., Japan is a pulsed accelerat
 The RFQ accelerator system can be divided into 6 major subsystems
 * [RF source (LLRF)](#rf-source)
 * [Timing system](#timing-system)
-* 200 MHz RF power amplifier
+* [200 MHz RF power amplifier](#200-mhz-rf-power-amplifier)
 * [Vacuum system](#vacuum-system)
 * [Cooling system](#cooling-system)
 * [Machine protection system](#machine-protection-system)
@@ -73,6 +73,14 @@ These channels can be configured with the Timing App as shown in Figure 30. To c
 
 ## 200 MHz RF power amplifier
 The RF Power amplifier is <a href="https://rk-microwave.com/wp-content/uploads/2021/12/CA200BW2-7585RP.pdf" target="_blank">custom made solid state RF power amplifier</a> operating at 200 MHz. The amplifier has a gain of about 75 dB and can transform 10mW (10dBm) of RF signal into 320 kW of RF power. The amplifier can operate a pulse length of 1.25mS at a pulse repetition rate of 40 Hz.  The RF Power amplifier connected to the RFQ is shown in Figure 4.
+
+The RF power amplifier requires two timing channels from the [Timing system](#timing-system).
+* <ins>Channel 2</ins>  for the RF Power Amp pulse gate
+* <ins>Channel 3</ins>  for the RF Power Amp sample and hold
+
+The RF power amplifier takes the low level signal generated from the [RF source](#rf-source) as shown in Figure 1. The amplifier has a 75dB directional coupler mounted  on its output and the forward and reflected RF signals are available on the front panel. These signals are fed into the [RF power monitor](https://docs.bl-mirrotron.com/mirrotron-rfpower-scope-tray/).
+
+The <a href="https://rk-microwave.com/" target="_blank">manufacturer</a> of the RF power amplifier provides a remote interface so the RF Power amplifier can be [controlled and monitored](https://docs.bl-mirrotron.com/mirrotron-rk-pa-tray/).  
 
 <p></p><p style="text-align:center;font-size: large;"><span style="font-weight: bold;color: green;">Figure 4. </span> <span style="font-style: italic;">RF power amplifier connected to RFQ</span></p>
 <div style="width:100%;text-align:center;"><img width="100%" style="border-style:solid;border-color:#1c6e97;" src="doc/PaAndRFQ.jpg"/></div><br>
