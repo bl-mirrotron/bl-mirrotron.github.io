@@ -13,6 +13,7 @@
 * <a href="https://docs.bl-mirrotron.com/mirrotron-rfq-llrf-timer-cube/">RFQ LLRF Timer Cube</a>
 * <a href="https://docs.bl-mirrotron.com/mirrotron-llrf-scope-tray/">IQ Monitor System</a>
 * <a href="https://docs.bl-mirrotron.com/mirrotron-rfpower-scope-tray/">RF Power Monitor System</a>
+* <a href="https://docs.bl-mirrotron.com/mirrotron-rk-pa-tray/">RF Power Amplifier System</a>
 * <a href="https://docs.bl-mirrotron.com/mirrotron-rfq-vacuum-tray/">RFQ Vacuum System</a>
 * <a href="https://docs.bl-mirrotron.com/mirrotron-rfq-vacuum-cube/">RFQ Vacuum System Cube Controller</a>
 * <a href="https://docs.bl-mirrotron.com/nXDS-backing-pump-tray/">Backing Pump System</a>
@@ -54,7 +55,7 @@ The RF source is a modular system based on the Red-Pitaya Stemlab 125-14 reconfi
 <div style="width:100%;text-align:center;"><img width="100%" style="border-style:solid;border-color:#1c6e97;" src="doc/llrf.jpg"/></div><br>
 
 ## Timing system
-The Mirrotron RFQ is a pulsed system so a timing system is required. The <a href="https://docs.bl-mirrotron.com/gateGen125-tray/">Mirrotron Timing system</a> is an 8 channel system based on a 32 bit counter clocked at 125 MHz. The resolution of the timing system is 8nS and can have intervals as long as 17 seconds. The implementation is shown in FigureXXX.
+The Mirrotron RFQ is a pulsed system so a timing system is required. The <a href="https://docs.bl-mirrotron.com/gateGen125-tray/">Mirrotron Timing system</a> is an 8 channel system based on a 32 bit counter clocked at 125 MHz. The resolution of the timing system is 8nS and can have intervals as long as 17 seconds. The implementation is shown in Figure 3.
 
 #### Channel allocation
 The Mirrotron RFQ uses five of the eight channels:
@@ -67,15 +68,18 @@ The Mirrotron RFQ uses five of the eight channels:
 #### Easy Setup Timer
 These channels can be configured with the Timing App as shown in Figure 30. To change the pulse length of the RFQ, all five channels would need to be adjusted which would be time consuming and error prone. To make it easier to change the pulse length a virtual tray called the Easy Setup Timer was created. This virtual tray will adjust all five channels synchronously. This virtual device is implemented in the <a href="https://docs.bl-mirrotron.com/mirrotron-box">Mirrotron application server</a>.
 
-<p></p><p style="text-align:center;font-size: large;"><span style="font-weight: bold;color: green;">FigureXXX. </span> <span style="font-style: italic;">Gate Generator Implementation</span></p>
+<p></p><p style="text-align:center;font-size: large;"><span style="font-weight: bold;color: green;">Figure 3. </span> <span style="font-style: italic;">Gate Generator Implementation</span></p>
 <div style="width:100%;text-align:center;"><img width="100%" style="border-style:solid;border-color:#1c6e97;" src="doc/GateGenImpl.jpg"/></div><br>
 
 ## 200 MHz RF power amplifier
-more to come
+The RF Power amplifier is <a href="https://rk-microwave.com/wp-content/uploads/2021/12/CA200BW2-7585RP.pdf" target="_blank">custom made solid state RF power amplifier</a> operating at 200 MHz. The amplifier has a gain of about 75 dB and can transform 10mW (10dBm) of RF signal into 320 kW of RF power. The amplifier can operate a pulse length of 1.25mS at a pulse repetition rate of 40 Hz.  The RF Power amplifier connected to the RFQ is shown in Figure 4.
+
+<p></p><p style="text-align:center;font-size: large;"><span style="font-weight: bold;color: green;">Figure 4. </span> <span style="font-style: italic;">RF power amplifier connected to RFQ</span></p>
+<div style="width:100%;text-align:center;"><img width="100%" style="border-style:solid;border-color:#1c6e97;" src="doc/PaAndRFQ.jpg"/></div><br>
 
 ## Vacuum system
 
-The RFQ requires ultra-high vacuum for operations. RF power should not be applied to the cavity unless the vacuum pressure inside the cavity is less than 5x10<sup>-5</sup> Pa. The RFQ has two identical vacuum systems mounted on either side of the RFQ as shown in FigureXXX. The <a href="https://docs.bl-mirrotron.com/mirrotron-rfq-vacuum-tray/">RFQ vacuum system tray</a> is responsible for:
+The RFQ requires ultra-high vacuum for operations. RF power should not be applied to the cavity unless the vacuum pressure inside the cavity is less than 5x10<sup>-5</sup> Pa. The RFQ has two identical vacuum systems mounted on either side of the RFQ as shown in Figure 5. The <a href="https://docs.bl-mirrotron.com/mirrotron-rfq-vacuum-tray/">RFQ vacuum system tray</a> is responsible for:
 * Control opening and closing of valves
 * Read status of gate valve limit switches
 * Read vacuum gauge pressures
@@ -92,13 +96,13 @@ The  <a href="https://docs.bl-mirrotron.com/nXDS-backing-pump-tray/">backing pum
   - Pump hours
   - Pump cycles
 
-<p></p><p style="text-align:center;font-size: large;"><span style="font-weight: bold;color: green;">FigureXXX. </span> <span style="font-style: italic;">Vacuum system layout</span></p>
+<p></p><p style="text-align:center;font-size: large;"><span style="font-weight: bold;color: green;">Figure 5. </span> <span style="font-style: italic;">Vacuum system layout</span></p>
 <div style="width:100%;text-align:center;"><img width="100%" style="border-style:solid;border-color:#1c6e97;" src="doc/VacuumLayout.png"/></div><br>
 
 ## Cooling system
 The RFQ will dissipate energy at an average rate of 15kW when running at peak RF power and  5% duty factor. To keep the remove this energy, two water chillers supply cooling water to the upstream (inlet) and downstream (outlet) ends of the RFQ.  The cooling water flows into headers that split the cooling to various cooling channels built into the RFQ. Control of the water chillers is manual and not part of the control system.
 
-However to ensure that water is flowing at the correct flow rate and temperature, a separate temperature monitor and flow monitor is mounted on each cooling channel on each header as shown in FigureXXX. On top of each header, as shown in FigureXXX,  are mounted custom built Blinky-Lite<sup>TM</sup> trays that measure and report the temperature and flow through each cooling channel to the control system.
+However to ensure that water is flowing at the correct flow rate and temperature, a separate temperature monitor and flow monitor is mounted on each cooling channel on each header as shown in Figure 6. On top of each header, as shown in Figure 7,  are mounted custom built Blinky-Lite<sup>TM</sup> trays that measure and report the temperature and flow through each cooling channel to the control system.
 
 Details about the cooling monitor system software and electronics can be found at:
 * <a href="https://docs.bl-mirrotron.com/mirrotron-rfq-temp-tray-inlet/">Inlet temperature tray</a>
@@ -106,10 +110,10 @@ Details about the cooling monitor system software and electronics can be found a
 * <a href="https://docs.bl-mirrotron.com/mirrotron-rfq-temp-tray-outlet/">Outlet temperature tray</a>
 * <a href="https://docs.bl-mirrotron.com/mirrotron-rfq-flow-tray-outlet/">Outlet flow tray</a>
 
-<p></p><p style="text-align:center;font-size: large;"><span style="font-weight: bold;color: green;">FigureXXX. </span> <span style="font-style: italic;">Cooling System Header</span></p>
+<p></p><p style="text-align:center;font-size: large;"><span style="font-weight: bold;color: green;">Figure 6. </span> <span style="font-style: italic;">Cooling System Header</span></p>
 <div style="width:100%;text-align:center;"><img width="100%" style="border-style:solid;border-color:#1c6e97;" src="doc/coolingHeaderBottomView.jpg"/></div><br>
 
-<p></p><p style="text-align:center;font-size: large;"><span style="font-weight: bold;color: green;">FigureXXX. </span> <span style="font-style: italic;">Outlet Cooling System Header<br>From left to right: Temperature cube and tray, 5V power, 24V power, Flow cube and tray</span></p>
+<p></p><p style="text-align:center;font-size: large;"><span style="font-weight: bold;color: green;">Figure 7. </span> <span style="font-style: italic;">Outlet Cooling System Header<br>From left to right: Temperature cube and tray, 5V power, 24V power, Flow cube and tray</span></p>
 <div style="width:100%;text-align:center;"><img width="100%" style="border-style:solid;border-color:#1c6e97;" src="doc/coolingHeaderTopView.jpg"/></div><br>
 
 ## Machine protection system
