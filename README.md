@@ -27,7 +27,6 @@
 * <a href="https://bl-mirrotron.github.io/mirrotron-rfq-vacuum-tray/">RFQ Vacuum System</a>
 * <a href="https://bl-mirrotron.github.io/mirrotron-rfq-vacuum-cube/">RFQ Vacuum System Cube Controller</a>
 * <a href="https://bl-mirrotron.github.io/nXDS-backing-pump-tray/">Backing Pump System</a>
-* <a href="https://bl-mirrotron.github.io/mirrotron-rfq-temp-cube/">RFQ Temperature Cube</a>
 * <a href="https://bl-mirrotron.github.io/mirrotron-rfq-temp-tray-inlet/">RFQ Inlet Temperature Tray</a>
 * <a href="https://bl-mirrotron.github.io/mirrotron-rfq-temp-tray-outlet/">RFQ Outlet Temperature Tray</a>
 * <a href="https://bl-mirrotron.github.io/mirrotron-rfq-flow-cube/">RFQ Flow Cube</a>
